@@ -11,7 +11,7 @@ Recommended memory requirements:
 
 4-8GB of RAM
 
-Due to the number of objects generated, this programs consumes alot of memory.
+Due to the number of objects generated, this program consumes alot of memory.
 
 Also, feedback is welcomed e.g. how to optimize the simulator. It is known that the there may be some objects that coould represtented differently.
 
