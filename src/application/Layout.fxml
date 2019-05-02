@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="762.0" prefWidth="1347.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <TitledPane fx:id="mainwindow" layoutX="140.0" layoutY="19.0" prefHeight="727.0" prefWidth="1122.0" text="Cache Simulator" textFill="#0a0a0a">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="559.0" prefWidth="926.0">
+               <children>
+                  <TableView fx:id="table_results" layoutX="782.0" layoutY="-1.0" prefHeight="696.0" prefWidth="338.0">
+                     <columns>
+                        <TableColumn fx:id="hit_col" editable="false" prefWidth="110.0" text="Hits" />
+                        <TableColumn fx:id="miss_col" editable="false" prefWidth="110.0" text="Misses" />
+                        <TableColumn fx:id="ratio_col" editable="false" prefWidth="122.0" text="Miss Ratio" />
+                     </columns>
+                  </TableView>
+               
+                  <Button fx:id="start" layoutX="104.0" layoutY="38.0" mnemonicParsing="false" onAction="#start_sim" text="Start" />
+                  <CheckBox fx:id="prefetch" layoutX="14.0" layoutY="43.0" mnemonicParsing="false" text="Prefetch" />
+                  <MenuBar fx:id="tools">
+                     <menus>
+                        <Menu fx:id="add_cpu_menu" mnemonicParsing="false" text="Add CPU">
+                           <items>
+                              <MenuItem fx:id="add_cpu_item" mnemonicParsing="false" onAction="#handle_add_cpu" text="Add" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Program URL">
+                           <items>
+                              <MenuItem fx:id="open" mnemonicParsing="false" onAction="#open_file" text="Open" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+                  <TextField fx:id="path" editable="false" layoutX="214.0" prefHeight="33.0" prefWidth="153.0" />
+                  <CheckBox fx:id="mode" layoutX="244.0" layoutY="44.0" mnemonicParsing="false" onAction="#mode32enable" text="32-bit mode" />
+                  <TextField fx:id="n_sims" layoutX="506.0" prefHeight="33.0" prefWidth="63.0" />
+                  <Label layoutX="569.0" layoutY="5.0" text="Number of simulations" />
+                  <BarChart fx:id="graph_results" layoutX="387.0" layoutY="109.0" prefHeight="559.0" prefWidth="397.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="x_axis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="y_axis" prefHeight="404.0" prefWidth="34.0" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <ChoiceBox fx:id="incl_pol" layoutX="367.0" prefHeight="33.0" prefWidth="140.0" />
+                  <TextArea fx:id="perf" editable="false" layoutX="9.0" layoutY="108.0" prefHeight="562.0" prefWidth="374.0" />
+                  <CheckBox fx:id="enable_mm" layoutX="244.0" layoutY="78.0" mnemonicParsing="false" text="Main Memory" />
+                  <CheckBox fx:id="reg_share" layoutX="513.0" layoutY="43.0" mnemonicParsing="false" onAction="#mode32enable" text="Register sharing" />
+               
+                  
+               </children>
+            </AnchorPane>
+         </content>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TitledPane>
+   </children>
+</AnchorPane>

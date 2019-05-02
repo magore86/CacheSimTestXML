@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="501.0" prefWidth="1040.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CacheWinController">
+   <children>
+      <TitledPane fx:id="cache_pane" animated="false" layoutY="7.0" prefHeight="494.0" prefWidth="1040.0" text="Add Cache">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="159.0" prefWidth="680.0">
+               <children>
+                  <Label layoutX="114.0" layoutY="4.0" text="Associativity" />
+                  <Label layoutX="7.0" layoutY="4.0" text="Capacity" />
+                  <Label layoutX="3.0" layoutY="60.0" text="Block size" />
+                  <TextField fx:id="cap" layoutY="25.0" prefHeight="30.0" prefWidth="70.0">
+                     <tooltip>
+                        <Tooltip text="Max 2MB" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="blk" layoutY="81.0" prefHeight="30.0" prefWidth="70.0">
+                     <tooltip>
+                        <Tooltip text="Max 256" />
+                     </tooltip>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </TextField>
+                  <Button fx:id="cont" layoutX="144.0" layoutY="411.0" mnemonicParsing="false" onAction="#input_checker_digit" prefHeight="31.0" prefWidth="86.0" text="Continue" />
+                  <TextField fx:id="assoc" layoutX="115.0" layoutY="25.0" prefHeight="31.0" prefWidth="85.0" />
+                  <CheckBox fx:id="fully_assoc" layoutX="115.0" layoutY="86.0" mnemonicParsing="false" onAction="#init_assoc" prefHeight="21.0" prefWidth="143.0" text="Fully associative" />
+                  <TextArea fx:id="instr" editable="false" layoutX="258.0" prefHeight="463.0" prefWidth="780.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

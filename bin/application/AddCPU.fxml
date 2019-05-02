@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchor_pane" prefHeight="222.0" prefWidth="452.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CPUWinController">
+   <children>
+      <TitledPane animated="false" layoutX="10.0" layoutY="10.0" text="Add CPU">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="800.0">
+               <children>
+                  <Button fx:id="ok_cpu" layoutX="289.0" layoutY="144.0" mnemonicParsing="false" onAction="#back_to_main" prefHeight="31.0" prefWidth="69.0" text="OK" />
+                  <TextField fx:id="cpu_number" layoutX="174.0" layoutY="144.0" prefHeight="31.0" prefWidth="115.0">
+                     <tooltip>
+                        <Tooltip text="Max 3000" />
+                     </tooltip>
+                  </TextField>
+                  <Label layoutX="174.0" layoutY="123.0" text="Number of CPUs" />
+                  <MenuBar fx:id="add_cache_bar" layoutY="-2.0" prefHeight="32.0" prefWidth="182.0">
+                     <menus>
+                        <Menu fx:id="add_cache_menu" mnemonicParsing="false" text="Caches">
+                           <items>
+                              <MenuItem fx:id="add_cache_item" mnemonicParsing="false" onAction="#handle_add_cache" text="Add" />
+                              <MenuItem fx:id="remove_cache" mnemonicParsing="false" onAction="#remove_caches" text="Remove all" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+                  <Separator layoutX="356.0" layoutY="-10.0" orientation="VERTICAL" prefHeight="187.0" prefWidth="12.0" />
+                  <TableView fx:id="tblv" layoutX="357.0" prefHeight="180.0" prefWidth="443.0">
+                    <columns>
+                      <TableColumn fx:id="lvl" prefWidth="51.0" text="Level" />
+                      <TableColumn fx:id="cap" prefWidth="162.0" text="Capacity" />
+                        <TableColumn fx:id="blk" prefWidth="129.0" text="Block size" />
+                        <TableColumn fx:id="assoc" prefWidth="100.0" text="Associativity" />
+                    </columns>
+                  </TableView>
+                  <CheckBox fx:id="edit_cache" layoutX="289.0" layoutY="4.0" mnemonicParsing="false" onAction="#set_edit_table" text="Edit" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
