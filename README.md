@@ -1,7 +1,7 @@
 # CacheSimTestXML
 Author: Magore86
 
-Please read! 
+Please read before reading code and running CacheSim.jar! 
 
 The cache simulator can simulate many different scenarios and configurations. At maximum 2 non-shared caches.
 The memory usage is rather high, so there is a limit to at max 1023 processors. In addition to this, please be adviced that memory usage can be as high as 1500MB.
