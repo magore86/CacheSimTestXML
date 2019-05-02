@@ -13,7 +13,7 @@ Recommended memory requirements:
 
 Due to the number of objects generated, this program consumes alot of memory.
 
-Also, feedback is welcomed e.g. how to optimize the simulator. It is known that the there may be some objects that coould represtented differently.
+Also, feedback is welcomed e.g. how to optimize the simulator. It is known that the there may be some objects that could represtented differently.
 
 Also the program implements an .xlsx-writer. This can be found in a different repository called MS Excel writer for Cache Simulator.
 
