@@ -17,6 +17,9 @@ Also, feedback is welcomed e.g. how to optimize the simulator. It is known that 
 
 Also the program implements an .xlsx-writer. This can be found in a different repository called MS Excel writer for Cache Simulator.
 
+Thanks to http://ref.x86asm.net/ and the people behind it, for a great overview of x86 instructions. The x86 instructions are parsed in FileReader.java.
+
+
 Regards
 
 Magore86
